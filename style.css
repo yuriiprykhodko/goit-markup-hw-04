@@ -4,6 +4,9 @@
   --title-blue-color: #2196f3;
   --accent-grey-color: #757575;
   --accent-grayish-color: #f5f4fa;
+  --accent-border-a-color: #afb1b8;
+  --accent-border-b-color: #eeeeee;
+  --accent-footer-b-color: rgba(255, 255, 255, 0.1);
 }
 body {
   background-color: var(--primery-white-color);
@@ -130,6 +133,19 @@ img {
   margin-left: 50px;
   margin-right: auto;
 }
+.header-contacts {
+  display: inline-flex;
+  align-items: center;
+}
+.icon {
+  margin-right: 10px;
+  padding: 0px;
+  fill: var(--accent-grey-color);
+}
+.header-contacts .icon:hover,
+.header-contacts .icon:focus {
+  fill: var(--title-blue-color);
+}
 .page-header-contacts-list .header-contacts:hover,
 .page-header-contacts-list .header-contacts:focus {
   color: var(--title-blue-color);
@@ -141,12 +157,22 @@ img {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 .main-hero {
   padding: 200px 0;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+
   background-color: var(--text-black-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 /*h1*/
 .hero {
@@ -239,6 +265,13 @@ img {
 }
 .kinds .kinds-kid + .kinds-kid {
   margin-left: 30px;
+}
+.icon-kinds-kid {
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: var(--accent-grayish-color);
 }
 /*doing*/
 /*container*/
@@ -346,11 +379,122 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--accent-grey-color);
+  margin-bottom: 16px;
 }
 .comand-card-name {
-  padding: 30px;
+  padding: 30px 32px;
 }
-/*footer*/
+/*ul*/
+.social-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+/*li*/
+.social-icon .comand-client-icon + .comand-client-icon {
+  margin-left: 10px;
+}
+/*svg*/
+.comand-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  fill: var(--accent-grey-color);
+}
+/*a*/
+.comand-button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  color: var(--primery-white-color);
+}
+.comand-button-icon:hover,
+.comand-button-icon:focus {
+  background-color: var(--title-blue-color);
+  --color3: var(--primery-white-color);
+}
+/*regular customers*/
+/*container*/
+.container-customers {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.main-customers {
+  background-color: var(--primery-white-color);
+}
+/*h2*/
+.customers {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-black-color);
+}
+
+/*ul*/
+.main-customer-list {
+  width: 1170px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/*li*/
+.clients-list {
+  margin: 0px;
+  padding: 0px;
+}
+.main-customer-list .clients-list + .clients-list {
+  margin-left: 30px;
+}
+/*svg*/
+.icon-customer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*a*/
+.button-customer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 170px;
+  height: 90px;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid var(--accent-border-a-color);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  fill: var(--primery-white-color);
+}
+.button-customer:hover,
+.button-customer:focus {
+  border-color: var(--title-blue-color);
+  --color3: var(--title-blue-color);
+}
+/*FOOTER*/
 
 /*container*/
 .page-footer .container-footer {
@@ -361,6 +505,10 @@ img {
   margin-right: auto;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer-content {
+  display: flex;
+  align-items: baseline;
 }
 .page-footer {
   background: var(--text-black-color);
@@ -411,6 +559,58 @@ img {
 .address-links .address-name:hover,
 .address-links .address-name:focus {
   color: var(--title-blue-color);
+}
+/*div*/
+.footer-icon-list {
+  width: 206px;
+  margin-left: 70px;
+}
+/*p*/
+.footer-slogan {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: var(--primery-white-color);
+}
+/*ul*/
+.footer-icon-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+/*li*/
+.footer-icon-social .footer-client-icon + .footer-client-icon {
+  margin-left: 10px;
+}
+/*а*/
+.footer-button-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--accent-footer-b-color);
+  border-radius: 50%;
+}
+/*svg*/
+.footer-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+
+  --color3: var(--primery-white-color);
+}
+
+.footer-button-icon:hover,
+.footer-button-icon:focus {
+  background-color: var(--title-blue-color);
 }
 
 /*portfolio.html*/
@@ -521,7 +721,7 @@ img {
 .card-content {
   width: 370px;
 
-  background-color: #ffffff;
+  background-color: var(--primery-white-color);
   text-align: left;
   padding-right: 24px;
   padding-bottom: 20px;
@@ -530,13 +730,17 @@ img {
 
   border-right-width: 1px;
   border-right-style: solid;
-  border-right-color: #eeeeee;
+  border-right-color: var(--accent-border-b-color);
 
   border-left-width: 1px;
   border-left-style: solid;
-  border-left-color: #eeeeee;
+  border-left-color: var(--accent-border-b-color);
 
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: #eeeeee;
+  border-bottom-color: var(--accent-border-b-color);
+}
+.main-slids:hover,
+.main-slids:focus {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }

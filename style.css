@@ -123,7 +123,6 @@ img {
 /*contacts*/
 /*ul*/
 .page-header-contacts-list {
-  color: var(--accent-grey-color);
   display: flex;
   margin: 0px;
   padding: 0px;
@@ -133,21 +132,20 @@ img {
   margin-left: 50px;
   margin-right: auto;
 }
+/*a*/
 .header-contacts {
   display: inline-flex;
   align-items: center;
+  color: var(--accent-grey-color);
 }
+/*svg*/
 .icon {
   margin-right: 10px;
   padding: 0px;
-  fill: var(--accent-grey-color);
+  fill: currentColor;
 }
-.header-contacts .icon:hover,
-.header-contacts .icon:focus {
-  fill: var(--title-blue-color);
-}
-.page-header-contacts-list .header-contacts:hover,
-.page-header-contacts-list .header-contacts:focus {
+.header-contacts:hover,
+.header-contacts:focus {
   color: var(--title-blue-color);
 }
 /*HERO*/
@@ -266,13 +264,20 @@ img {
 .kinds .kinds-kid + .kinds-kid {
   margin-left: 30px;
 }
-.icon-kinds-kid {
+/*div*/
+.icon-kinds {
   width: 270px;
   height: 120px;
-  padding: 25px 100px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
+
   background-color: var(--accent-grayish-color);
 }
+
 /*doing*/
 /*container*/
 .main-doing .container-doing {
@@ -472,6 +477,8 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  fill: var(--primery-white-color);
 }
 /*a*/
 .button-customer {
@@ -486,8 +493,6 @@ img {
   border: 1px solid var(--accent-border-a-color);
   box-sizing: border-box;
   border-radius: 4px;
-
-  fill: var(--primery-white-color);
 }
 .button-customer:hover,
 .button-customer:focus {
@@ -644,6 +649,7 @@ img {
 .button-type {
   display: block;
 }
+/*кнопка*/
 .button-link {
   border: 0px;
   padding-right: 22px;
@@ -651,6 +657,8 @@ img {
   padding-top: 6px;
   padding-bottom: 6px;
   border-radius: 4px;
+  background-color: var(--accent-grayish-color);
+  color: var(--text-black-color);
 }
 /*название кнопки*/
 .button-name {
@@ -659,14 +667,11 @@ img {
   line-height: 1.6;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--text-black-color);
+  color: currentColor;
 }
-.button-type .button-link:hover,
-.button-type .button-link:focus {
+.button-link:hover,
+.button-link:focus {
   background-color: var(--title-blue-color);
-}
-.button-type .button-name:hover,
-.button-type .button-name:focus {
   color: var(--primery-white-color);
 }
 .button-adrress .button-type + .button-type {
@@ -742,5 +747,5 @@ img {
 }
 .main-slids:hover,
 .main-slids:focus {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
